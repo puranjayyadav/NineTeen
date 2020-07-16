@@ -1,0 +1,91 @@
+[
+  {
+  "id": 0 ,
+  "name": "Chaap Hut", 
+  "contact": 9166116511 
+  },
+  
+  {
+  "id": 1 ,
+  "name": "Chatkara" ,
+  "contact": 7375041725 
+  },
+  
+  {
+  "id": 2 ,
+  "name": "Chilling Point" ,
+  "contact": 9521099336 
+  },
+  
+  {
+  "id": 3 ,
+  "name": "The Crazy Chef" ,
+  "contact":  9660343726 
+  },
+  
+  {
+  "id": 4 ,
+  "name": "Cruncheez" ,
+  "contact":  9001641663 
+  },
+  
+  {
+  "id": 5 ,
+  "name": "Delight Shakes" ,
+  "contact": 9660344966 
+  },
+  
+  {
+  "id": 6 ,
+  "name": "Dev Sweets" ,
+  "contact":  7665616797 
+  },
+  
+  {
+  "id": 7 ,
+  "name": "Dialog" ,
+  "contact":  9983087222 
+  },
+  
+  {
+  "id": 8 ,
+  "name": "Indie Vibes", 
+  "contact": 9116666188 
+  },
+  
+  {
+  "id": 9 ,
+  "name": "Kebab Nation" ,
+  "contact":  7357549601 
+  },
+  
+  {
+  "id": 10 ,
+  "name": "Let's Go Live" ,
+  "contact":  7357549602 
+  },
+  
+  {
+  "id": 11 ,
+  "name": "Login" ,
+  "contact":  9799295329 
+  },
+  {
+  "id": 12 ,
+  "name": "Saras Drinks" ,
+  "contact":  7340000547 
+  },
+  
+  {
+  "id": 13 ,
+  "name": "Saras Food" ,
+  "contact":  9166116515 
+  },
+  
+  {
+  "id": 14 ,
+  "name": "Tandoor" ,
+  "contact":  7300116308 
+  }
+  
+  ]
