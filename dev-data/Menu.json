@@ -1,18 +1,121 @@
 [
     {
-    "id": 4,
-    "Dish_name": "hey",
-    "price": 150
+    "Dish_name": "Pizza Pocket",
+    "price": 150,
+    "ratingsAverage": 5
     },
     {
-     "id": 5,
-    "Dish_name": "Dev",
-    "price": 10
+    
+    "Dish_name": "French Fries Large",
+    "price": 10,
+    "ratingsAverage": 2.5
+
         },
         {
-    "id": 6,
-    "Dish_name": "Dev Swes",
-    "price": 15
+ 
+    "Dish_name": "Potato Wedges",
+    "price": 15,
+    "ratingsAverage": 1.5
+
+            },
+        {
+    
+    "Dish_name": "Veg Spring Roll",
+    "price": 15,
+    "ratingsAverage": 3.5
+
             }
+            ,
+            {
+        
+        "Dish_name": "Honey Chilli Potato",
+        "price": 15,
+        "ratingsAverage": 2.5
+    
+                }
+
+                ,
+                {
+            
+            "Dish_name": "Dragon Potato",
+            "price": 15,
+            "ratingsAverage": 4.5
+        
+                    }
+                    ,
+                    {
+                
+                "Dish_name": "Veg Manchurian Dry & Gravy",
+                "price": 15,
+                "ratingsAverage": 5
+            
+                        }
+                        ,
+                        {
+                    
+                    "Dish_name": "Crispy Veg",
+                    "price": 15,
+                    "ratingsAverage": 4.5
+                
+                            }
+                            ,
+                            {
+                        
+                        "Dish_name": "Chilly Paneer Dry & Gravy",
+                        "price": 15,
+                        "ratingsAverage": 4.5
+                    
+                                }
+                                ,
+                                {
+                            
+                            "Dish_name": "Paneer Manchurian",
+                            "price": 15,
+                            "ratingsAverage": 4.5
+                        
+                                    }
+                                    ,
+                                    {
+                                
+                                "Dish_name": "Paneer 65",
+                                "price": 15,
+                                "ratingsAverage": 4.5
+                            
+                                        },
+                                        {
+                                    
+                                    "Dish_name": "Hunan Paneer",
+                                    "price": 15,
+                                    "ratingsAverage": 4.5
+                                
+                                            },
+                                            {
+                                        
+                                        "Dish_name": "Honey Chilly Paneer",
+                                        "price": 15,
+                                        "ratingsAverage": 4.5
+                                    
+                                                },
+                                                {
+                                            
+                                            "Dish_name": "Veg Gold Coin",
+                                            "price": 15,
+                                            "ratingsAverage": 4.5
+                                        
+                                                    },
+                                                    {
+                                                
+                                                "Dish_name": "Chicken Nuggets",
+                                                "price": 15,
+                                                "ratingsAverage": 4.5
+                                            
+                                                        },
+                                                        {
+                                                    
+                                                    "Dish_name": "Chicken Spring Roll",
+                                                    "price": 15,
+                                                    "ratingsAverage": 4.5
+                                                
+                                                            }
  
 ]

@@ -1,6 +1,17 @@
+//This page will be converted to a single page on which all shops will be listed beautifully
 const Menu = require('../models/menuModel');
-
+const APIFeatures = require('../apiFeatures');
 //Middleware funtions
+
+exports.aliasTopShop = (req,res,next)=>{
+    req.query.limit ='5';
+    req.query.sort ='-ratingsAverage , price';
+    req.query.fields = 'name,price,ratingsAverage';
+    next();
+}
+
+
+
 
 exports.checkBody= (req,res,next)=>{
     if(!req.body.Dish_name || !req.body.price){
@@ -14,38 +25,11 @@ exports.checkBody= (req,res,next)=>{
 
 exports.getAllMenu =async (req,res) =>{
     try{
-        //Filtering
-        const queryObj ={ ...req.query};
-        const excludedFields =['page','sort','limit','fields']
-        excludedFields.forEach(el=> delete queryObj[el]);
-
-        //Advanced Filtering 
-
-        let queryStr = JSON.stringify(queryObj);
-        queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g ,match =>`$${match}`);
-        console.log(JSON.parse(queryStr));
-
-        let query = Menu.find(JSON.parse(queryStr));
-
-        //Sorting
-        if(req.query.sort){
-            const sortBy = req.query.sort.split(',').join(' ');
-            console.log(sortBy);
-            query = query.sort(sortBy);
-        }else{
-            query = query.sort('-price');
-        }
-
-        //Field Limiting 
-        if(req.query.fields){
-            const fields = req.query.fields.split(',').join(' ');
-            query = query.select(fields);
-        }else{
-            query = query.select('-__v');
-        }
 
         //EXECUTED QUERY 
-        const menu = await query;
+
+        const features = new APIFeatures(Menu.find() , req.query).filter().sort().limitFields();
+        const menu = await features.query;
         res.status(200).json({
             status:'Success',
             data:{
@@ -55,7 +39,7 @@ exports.getAllMenu =async (req,res) =>{
     }catch(err){
             res.status(400).json({
                 status: 'Error',
-                message: err
+                message: err.stack
             })
     }
 }
@@ -95,7 +79,7 @@ exports.createMenu =async (req,res) =>{
        }catch(err){
         res.status(400).json({
         status:'Fail',
-        message : 'Invalid DATA sent'
+        message : err.stack
     })
 }
 }
@@ -115,3 +99,38 @@ exports.deleteMenu =async(req,res) =>{
     }
 
 };
+
+exports.getMenuStats = async (req, res) => {
+    try {
+      const stats = await Menu.aggregate([
+        {
+          $match: { ratingsAverage: {$gte:4.5}}
+        },
+        {
+          $group: {
+            _id: null,
+            avgRating: { $avg: '$ratingsAverage' },
+            avgPrice: { $avg: '$price' }
+          }
+        },
+        {
+          $sort: { avgPrice: 1 }
+        }
+        // {
+        //   $match: { _id: { $ne: 'EASY' } }
+        // }
+      ]);
+  
+      res.status(200).json({
+        status: 'success',
+        data: {
+          stats
+        }
+      });
+    } catch (err) {
+      res.status(404).json({
+        status: 'fail',
+        message: err.stack
+      });
+    }
+  };
