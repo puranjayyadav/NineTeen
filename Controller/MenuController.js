@@ -1,6 +1,7 @@
 //This page will be converted to a single page on which all shops will be listed beautifully
 const Menu = require('../models/menuModel');
 const APIFeatures = require('../apiFeatures');
+const AppError = require('./../appError');
 //Middleware funtions
 
 exports.aliasTopShop = (req,res,next)=>{
