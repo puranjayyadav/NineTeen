@@ -92,7 +92,7 @@ exports.deleteMenu =async(req,res) =>{
             res.status(200).json({
                 status: 'Success'
             })
-    }catch{
+    }catch(err){
         res.status(400).json({
             status:'Error',
            message:'Failed to delete Contact' 

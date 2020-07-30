@@ -3,11 +3,15 @@ const deotenv = require('dotenv');
 const app= require('./app');
 deotenv.config({path: './config.env'});
 //SERVER MANAGEMENT SYSTEM
-const DB = process.env.DATABASE.replace(
-    '<password>',
-    process.env.DATABASE_PASSWORD
-)
-mongoose.connect(DB,{
+const {
+    MONGO_USERNAME,
+    MONGO_PASSWORD,
+    MONGO_PORT,
+    MONGO_DB
+  } = process.env;
+  
+const url = `mongodb+srv://${MONGO_USERNAME}:${MONGO_PASSWORD}@cluster0.ykhst.mongodb.net/${MONGO_DB}?retryWrites=true&w=majority`
+mongoose.connect(url,{
     useNewUrlParser: true,
     useCreateIndex:true,
     useFindAndModify:false,
