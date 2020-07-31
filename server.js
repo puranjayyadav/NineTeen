@@ -10,7 +10,7 @@ const {
     MONGO_DB
   } = process.env;
   
-const url = `mongodb+srv://${MONGO_USERNAME}:${MONGO_PASSWORD}@cluster0.ykhst.mongodb.net/${MONGO_DB}?retryWrites=true&w=majority`
+const url = `mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_HOSTNAME}:${MONGO_PORT}/${MONGO_DB}?authSource=admin`;
 mongoose.connect(url,{
     useNewUrlParser: true,
     useCreateIndex:true,
