@@ -3,14 +3,9 @@ const deotenv = require('dotenv');
 const app= require('./app');
 deotenv.config({path: './config.env'});
 //SERVER MANAGEMENT SYSTEM
-const {
-    MONGO_USERNAME,
-    MONGO_PASSWORD,
-    MONGO_PORT,
-    MONGO_DB
-  } = process.env;
+
   
-const url = `mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_HOSTNAME}:${MONGO_PORT}/${MONGO_DB}?authSource=admin`;
+const url = `mongodb+srv://vodKA:9xW7z3Tdd7qhGwgo@cluster0.ykhst.mongodb.net/MUJ?retryWrites=true&w=majority`;
 mongoose.connect(url,{
     useNewUrlParser: true,
     useCreateIndex:true,

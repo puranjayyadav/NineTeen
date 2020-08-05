@@ -2,6 +2,7 @@
 const Menu = require('../models/menuModel');
 const APIFeatures = require('../apiFeatures');
 const AppError = require('./../appError');
+const catchAsync = require('./../catchAsync')
 //Middleware funtions
 
 exports.aliasTopShop = (req,res,next)=>{
@@ -10,7 +11,6 @@ exports.aliasTopShop = (req,res,next)=>{
     req.query.fields = 'name,price,ratingsAverage';
     next();
 }
-
 
 
 
@@ -24,10 +24,7 @@ exports.checkBody= (req,res,next)=>{
     next();
 }
 
-exports.getAllMenu =async (req,res) =>{
-    try{
-
-        //EXECUTED QUERY 
+exports.getAllMenu =catchAsync(async (req,res ,next) =>{
 
         const features = new APIFeatures(Menu.find() , req.query).filter().sort().limitFields();
         const menu = await features.query;
@@ -37,16 +34,10 @@ exports.getAllMenu =async (req,res) =>{
                 menu
             }
         })
-    }catch(err){
-            res.status(400).json({
-                status: 'Error',
-                message: err.stack
-            })
-    }
-}
+})
 
-exports.updateMenu =async (req,res) =>{
-  try{
+exports.updateMenu =catchAsync(async (req,res,next) =>{
+  
     const menu = await Menu.findByIdAndUpdate(req.params.id ,{  
          new:true,
          runValidators: true
@@ -59,50 +50,31 @@ exports.updateMenu =async (req,res) =>{
         }
     });
  
-  }catch(err){
-    res.status(404).json({
-        status:"Error",
-        message:err
-    })
+})
 
-  }
-}
-
-exports.createMenu =async (req,res) =>{
-    try{
+exports.createMenu = catchAsync(async (req,res,next) =>{
+   
         const newMenu = await Menu.create(req.body);
         res.status(201).json({
             status:'Success',
             data:{
                 newMenu
             }
+          });
+  
         })
-       }catch(err){
-        res.status(400).json({
-        status:'Fail',
-        message : err.stack
-    })
-}
-}
 
-exports.deleteMenu =async(req,res) =>{
+exports.deleteMenu =catchAsync(async(req,res,next) =>{
    
-    try{
+    
         const menu= await Menu.findOneAndDelete(req.params.id);
             res.status(200).json({
                 status: 'Success'
             })
-    }catch(err){
-        res.status(400).json({
-            status:'Error',
-           message:'Failed to delete Contact' 
-        })
-    }
+    
+});
 
-};
-
-exports.getMenuStats = async (req, res) => {
-    try {
+exports.getMenuStats =catchAsync( async (req, res,next) => {
       const stats = await Menu.aggregate([
         {
           $match: { ratingsAverage: {$gte:4.5}}
@@ -128,10 +100,5 @@ exports.getMenuStats = async (req, res) => {
           stats
         }
       });
-    } catch (err) {
-      res.status(404).json({
-        status: 'fail',
-        message: err.stack
-      });
-    }
-  };
+   
+  });

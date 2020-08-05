@@ -2,6 +2,7 @@ const fs= require('fs');
 const express= require('express');
 const morgan = require('morgan');
 
+const AppError = require('./appError');
 const contactsRouter = require('./Routers/contactRouter');
 const statusRouter = require('./Routers/statusRouter');
 const menuRouter = require('./Routers/menuRouter');
@@ -22,6 +23,10 @@ app.use((req,res,next) =>{
     next();
 })
 
+app.use('/api/v1/contacts' , contactsRouter);
+app.use('/api/v1/status'   , statusRouter );
+app.use('/api/v1/menu' , menuRouter);
+
 app.all('*' ,(req,res,next)=>{
        next(new AppError(`Cant find ${req.originalUrl} on this server`, 404));
 });
@@ -30,9 +35,7 @@ app.use(globalErrorHandler);
 
 
 //DEFINING ROUTES(GLOBAL)
-app.use('/api/v1/contacts' , contactsRouter);
-app.use('/api/v1/status'   , statusRouter );
-app.use('/api/v1/menu' , menuRouter);
+
 
 //START SERVER
 

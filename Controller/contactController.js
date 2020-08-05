@@ -1,5 +1,7 @@
 const Contact = require('../models/contactModels');
 const { findByIdAndUpdate } = require('../models/contactModels');
+const catchAsync = require('./../catchAsync');
+const AppError = require('../appError');
 
 //Middleware functions
 
@@ -14,8 +16,8 @@ exports.checkBody =(req,res,next)=>{
     next();
 }
 //REST API features 
-exports.getAllContacts =  async(req,res) =>{
-   try{
+exports.getAllContacts =  catchAsync(async(req,res,next) =>{
+ 
        const queryObj ={...req.query};
        const excludedFields =['page','sort','limit','fields']
        excludedFields.forEach(el=> delete queryObj[el]);
@@ -29,69 +31,56 @@ exports.getAllContacts =  async(req,res) =>{
                 contacts
             }
         });
-   }catch(err){
-res.status(400).json({
-    status:'Error',
-    message: err
 });
-   }
-};
 
-exports.getContact = async(req,res)=>{
-    try{
+exports.getContact = catchAsync(async(req,res,next)=>{
+    
         const contacts = await Contact.findById(req.params.id);
+        if(!contacts){
+            return next(new AppError('No contact found with that ID',404))
+        }
         res.status(200).json({
             status:"Success",
             data:{
                 contacts
             }
         })
-    }catch(err){
-        res.status(400).json({
-            status:'Error',
-            message:err
-        })
-    }
-};
 
-exports.updateContact = async(req,res) =>{
-    try{
+});
+
+exports.updateContact = catchAsync(async(req,res,next) =>{
+   
         const contacts = await Contact.findByIdAndUpdate(req.params.id, req.body,{
             new: true,
             runValidators: true
         });
+
+        if(!contacts){
+            return next(new AppError('No contact found with that ID',404))
+        }
         res.status(200).json({
             status:"Success",
             data:{
                 contacts
             }
         })
+});
 
-    }catch(err){
-        res.status(404).json({
-            status:"Error",
-            message:err
-        })
-    }
-};
-
-exports.deleteContact = async(req,res) =>{
-    try{
+exports.deleteContact =catchAsync( async(req,res,next) =>{
+  
         const contacts= await Contact.findOneAndDelete(req.params.id);
+        
+        if(!contacts){
+            return next(new AppError('No contact found with that ID',404))
+        }
             res.status(200).json({
                 status: 'Success'
             })
-    }catch(err){
-        res.status(400).json({
-            status:'Error',
-           message:'Failed to delete Contact' 
-        })
-    }
 
-};
+});
 
-exports.addContact =async(req,res)=>{
-   try{
+exports.addContact =catchAsync(async(req,res,next)=>{
+   
     const newContact = await Contact.create(req.body);
     res.status(201).json({
         status:'Success',
@@ -99,10 +88,4 @@ exports.addContact =async(req,res)=>{
             contact: newContact
         }
     })
-   }catch(err){
-    res.status(400).json({
-    status:'Fail',
-    message : 'Invalid DATA sent'
 })
-}
-}
