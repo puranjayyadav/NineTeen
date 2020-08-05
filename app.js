@@ -6,6 +6,7 @@ const AppError = require('./appError');
 const contactsRouter = require('./Routers/contactRouter');
 const statusRouter = require('./Routers/statusRouter');
 const menuRouter = require('./Routers/menuRouter');
+const userRouter = require('./Routers/userRoutes')
 const globalErrorHandler = require('./Controller/errorController');
 const app= express();
 console.log(process.env.NODE_ENV);
@@ -23,6 +24,7 @@ app.use((req,res,next) =>{
     next();
 })
 
+app.use('/api/v1/users' , userRouter)
 app.use('/api/v1/contacts' , contactsRouter);
 app.use('/api/v1/status'   , statusRouter );
 app.use('/api/v1/menu' , menuRouter);
