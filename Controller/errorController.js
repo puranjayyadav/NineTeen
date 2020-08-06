@@ -23,7 +23,7 @@ const sendErrorProd = (err,res)=>{
     }else{
 
         // 1)Log Error
-        console.log('Error' , err.stack);
+        console.log('Error' , err);
         res.status(500).json({
             status: 'error',
             message: 'Something went very wrong!'
