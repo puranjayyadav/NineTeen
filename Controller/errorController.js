@@ -17,12 +17,13 @@ const sendErrorProd = (err,res)=>{
     if(err.isOperational){
         res.status(err.statusCode).json({
             status: err.status,
-            message: err.message
+            message: err.message,
+            error:err.stack
         });
     }else{
 
         // 1)Log Error
-        console.log('Error' , err);
+        console.log('Error' , err.stack);
         res.status(500).json({
             status: 'error',
             message: 'Something went very wrong!'
