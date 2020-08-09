@@ -12,7 +12,6 @@ const handleDuplicateFieldsDB = err =>{
     return new AppError(message , 400);
 }
 const sendErrorDev = (err,res)=>{
-
     res.status(err.statusCode).json({
         status: err.status,
         error: err,
@@ -24,7 +23,8 @@ const sendErrorProd = (err,res)=>{
     if(err.isOperational){
         res.status(err.statusCode).json({
             status: err.status,
-            message: err.message
+            message: err.message,
+            error:err.stack
         });
     }else{
 
