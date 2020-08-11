@@ -39,7 +39,7 @@ const userSchema = new mongoose.Schema({
     },
     passwordChangedAt: Date,
     passwordResetToken: String,
-    passwrodExpiresDate: Date
+    passwordResetExpires: Date
     
 });
 //Hashing the password with BCrypt Library Then using JWT to further enhance the hash
@@ -62,6 +62,14 @@ userSchema.methods.correctPassword = async function(
 ){
     return await bcrypt.compare(candidatePassword , userPassword)
 };
+
+userSchema.methods.changedPasswordAfter = function(JWTTimeStamp) {
+    if(this.passwordChangedAt){
+        const changedTimeStamp =parseInt(this.passwordChangedAt.getTime()/1000 ,10)
+        return JWTTimeStamp < changedTimeStamp;
+    }
+    return false;
+}
 
 
 //Creating Reset Token HASH
