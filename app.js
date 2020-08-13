@@ -3,7 +3,9 @@ const express= require('express');
 const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
 const helmet = require('helmet');
-
+const mongoSanititze = require('express-mongo-sanitize');
+const xss = require('xss-clean');
+const hpp = require('hpp');
 
 const AppError = require('./appError');
 const contactsRouter = require('./Routers/contactRouter');
@@ -12,6 +14,8 @@ const menuRouter = require('./Routers/menuRouter');
 const userRouter = require('./Routers/userRoutes')
 const globalErrorHandler = require('./Controller/errorController');
 const app= express();
+
+app.use(helmet());
 console.log(process.env.NODE_ENV);
 
 if(process.env.NODE_ENV ==='development'){
@@ -25,7 +29,12 @@ const limiter = rateLimit({
 });
 app.use('/api' , limiter);
 
-app.use(express.json());
+app.use(express.json({limit: '10kb'}));
+
+app.use(mongoSanititze());
+app.use(xss());
+
+app.use(hpp());
 app.use(express.static(`${__dirname}/public`));
 
 
