@@ -1,3 +1,4 @@
+  
 doctype html
 head
   title Nineteen | #{title}
@@ -18,170 +19,17 @@ head
   // Theme Style
   link(rel='stylesheet' href='assets/css/main.css')
   link(rel='stylesheet' href='css/style.css')
-.site-wrap
-  nav#ftco-navbar-spy.site-menu
-    #ftco-navbar.site-menu-inner
-      ul.list-unstyled
-        li
-          a(href='#section-home') Home
-        li
-          a(href='#intro') About Us
-        li
-          a(href='Contacts.html') Contacts
-        li
-          a(href='menu.html') Mess Menu
-        li
-          a(href='#section-contact') Contact Us
-        li
-          a(href='') Team
-  header.site-header
-    .row.align-items-center
-      .col-5.col-md-3
-      .col-2.col-md-6.text-center.site-logo-wrap
-        a.site-logo(href='index.html') N
-      .col-5.col-md-3.text-right.menu-burger-wrap
-        a.site-nav-toggle.js-site-nav-toggle(href='#')
-          i
-  // site-header
-  #section-home.main-wrap
-    .cover_1.overlay.bg-light
-      .img_bg(style='background-image: url(images/Final.jpg);' data-stellar-background-ratio='0.5')
-        .container
-          .row.align-items-center.justify-content-center.text-center
-            .col-md-10(data-aos='fade-up')
-              h2(class='heading') Nineteen
-    // .cover_1
-    #wrapper
-      // Banner
-      section#intro.main
-        span.icon.fa-diamond.major
-        h2 What we aim at
-        p
-          | Simplicity. Our prime goal is to bring simplcity in lives of students in college . All the information about anything you need is available here.
-          | You got you important contacts , Menu of diffrent Shops , DMS , Status of GYM/POOL/LAUNDRY/LIBRARY
-        ul.actions
-          li
-            a.button.big(href='#') Learn More
-      // Items
-      section.main.items
-        article.item
-          header
-            a(href='contacts.html')
-              img(src='images/Contact3.jpg' style='height: 100%; width: 100%;' alt='')
-            h3 Contacts
-          p
-            | Ever find yourself texting your friend in middle of night ? Only to find out that he/she is sound asleep and you&apos;ve got no way to get to your sweet Mexican Sandwich by Dev-Sweets. Don&apos;t worry we&apos;ve got you covered
-          ul.actions
-            li
-              a.button(href='contacts.html') More
-        article.item
-          header
-            a(href='menu.html')
-              img(src='images/food2.jpg' style='height: 100%; width: 100%; object-fit:cover' alt='')
-            h3 Menu
-          p
-            | Kadhi Pakoda in mess and you hate it. Well we got you covered check the menu of today and contact your favorite Chicken biryani or an extra large pizza from dailog from here.
-            br
-            br
-          ul.actions
-            li
-              a.button(href='menu.html') More
-        article.item
-          header
-            a(href='#')
-              img(src='images/Stats1.jpg' style='height: 100%; width: 100%; object-fit:cover' alt='')
-            h3 DMS
-          p
-            | The only place in our college which consistently agree not to work but we are still going to put it up here because we need it :)
-          ul.actions
-            li
-              a.button(href='#') More
-        article.item
-          header
-            a(href='#')
-              img(src='images/Gym.jpg' style='height: 100%; width: 100%; object-fit:cover' alt='')
-            h3 Gym/Laundry Status
-          p
-            | Check whether Gym/Laundry is Open or Closed 
-          ul.actions
-            li
-              a.button(href='#') More
-      // CTA
-      section#cta.main.special
-        h2 Suggestions?
-        p We will try our best and go beyond to solve your issues and improve this place.
-        #section-contact.section(data-aos='fade-up')
-          .container
-            .row.section-heading.justify-content-center.mb-5
-              .col-md-8.text-center
-                h2.heading.mb-3 Get In Touch
-            .row.justify-content-center
-              .col-md-10.p-5.form-wrap
-                form(action='#')
-                  .row.mb-4
-                    .form-group.col-md-4
-                      label.label(for='name') Name
-                      .form-field-icon-wrap
-                        span.fa.fa-user
-                        input#name.form-control(type='text')
-                    .form-group.col-md-4
-                      label.label(for='email') Email
-                      .form-field-icon-wrap
-                        span.fa.fa-envelope
-                        input#email.form-control(type='email')
-                    .form-group.col-md-4
-                      label.label(for='phone') Phone
-                      .form-field-icon-wrap
-                        span.fa.fa-phone
-                        input#phone.form-control(type='text')
-                    .form-group.col-md-12
-                      label.label(for='message') Message
-                      span.fa.fa-comments
-                      textarea#message.form-control(name='message' cols='30' rows='10')
-                  .row.justify-content-center
-                    .col-md-4
-                      input.btn.btn-primary.btn-outline-primary.btn-block(type='submit' value='Send Message')
-        // .section
-      // Footer
-      footer#footer
-        ul.icons
-          li
-            a.icon.fa-twitter(href='#')
-              span.label Twitter
-          li
-            a.icon.fa-facebook(href='#')
-              span.label Facebook
-          li
-            a.icon.fa-instagram(href='#')
-              span.label Instagram
-          li
-            a.icon.fa-linkedin(href='#')
-              span.label LinkedIn
-          li
-            a.icon.fa-envelope(href='#')
-              span.label Email
-        p.copyright
-          | &copy; Design By  
-          a(href='https://www.linkedin.com/in/Puranjay-Yadav\
-          ') Puranjay
-          |  / 
-          a(href='https://www.linkedin.com/in/pritam-reddy-76855693/') Pritam
-          | .
+body 
+    //Site Button
+    include _site-button
+    include _header
+   
+    // Items
+    include items
+        
+    // Footer
+    include _footer
+       
     // loader
-    #loader.show.fullscreen
-      svg.circular(width='48px' height='48px')
-        circle.path-bg(cx='24' cy='24' r='22' fill='none' stroke-width='4' stroke='#eeeeee')
-        circle.path(cx='24' cy='24' r='22' fill='none' stroke-width='4' stroke-miterlimit='10' stroke='#ff7a5c')
-    script(src='js/jquery-3.2.1.min.js')
-    script(src='js/jquery-migrate-3.0.1.min.js')
-    script(src='js/popper.min.js')
-    script(src='js/bootstrap.min.js')
-    script(src='js/owl.carousel.min.js')
-    script(src='js/jquery.waypoints.min.js')
-    script(src='js/bootstrap-datepicker.js')
-    script(src='js/jquery.timepicker.min.js')
-    script(src='js/jquery.stellar.min.js')
-    script(src='js/jquery.easing.1.3.js')
-    script(src='js/aos.js')
-    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false')
-    script(src='js/main.js')
+    include loader
+        

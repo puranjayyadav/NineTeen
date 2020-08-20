@@ -1,0 +1,90 @@
+#wrapper
+  // Banner
+  section#intro.main
+    span.icon.fa-diamond.major
+    h2(class='what') What we aim at
+    p
+      | Simplicity. Our prime goal is to bring simplcity in lives of students in college . All the information about anything you need is available here.
+      | You got you important contacts , Menu of diffrent Shops , DMS , Status of GYM/POOL/LAUNDRY/LIBRARY
+    ul.actions
+      li
+        a.button.big(href='#') Learn More
+  // Items
+  section.main.items
+    article.item
+      header
+        a(href='contacts.html')
+          img(src='images/Contact3.jpg' style='height: 100%; width: 100%; object-fit:cover' alt='')
+        h3 Contacts
+      p
+        | Ever find yourself texting your friend in middle of night ? Only to find out that he/she is sound asleep and you've got no way to get to your sweet Mexican Sandwich by Dev-Sweets. Don't worry we've got you covered
+      ul.actions
+        li
+          a.button(href='contacts.html') More
+    article.item
+      header
+        a(href='menu.html')
+          img(src='images/food2.jpg' style='height: 100%; width: 100%; object-fit:cover' alt='')
+        h3 Menu
+      p
+        | Kadhi Pakoda in mess and you hate it. Well we got you covered check the menu of today and contact your favorite Chicken biryani or an extra large pizza from dailog from here.
+        br
+        br
+      ul.actions
+        li
+          a.button(href='menu.html') More
+    article.item
+      header
+        a(href='#')
+          img(src='images/Stats1.jpg' style='height: 100%; width: 100%; object-fit:cover' alt='')
+        h3 DMS
+      p
+        | The only place in our college which consistently agree not to work but we are still going to put it up here because we need it :)
+      ul.actions
+        li
+          a.button(href='#') More
+    article.item
+      header
+        a(href='#')
+          img(src='images/Gym.jpg' style='height: 100%; width: 100%; object-fit:cover' alt='')
+        h3 Gym/Laundry Status
+      p
+        | Click to check if Laundry And Gym are open or closed
+      ul.actions
+        li
+          a.button(href='#') More
+  // CTA
+  section#cta.main.special
+    h2(class='what') Suggestions?
+    p We will try our best and go beyond to solve your issues and improve this place.
+    #section-contact.section(data-aos='fade-up')
+      .container
+        .row.section-heading.justify-content-center.mb-5
+          .col-md-8.text-center
+        .row.justify-content-center
+          .col-md-10.p-5.form-wrap
+            form(action='#')
+              .row.mb-4
+                .form-group.col-md-4
+                  label.label(for='name') Name
+                  .form-field-icon-wrap
+                    span.fa.fa-user
+                    input#name.form-control(type='text')
+                .form-group.col-md-4
+                  label.label(for='email') Email
+                  .form-field-icon-wrap
+                    span.fa.fa-envelope
+                    input#email.form-control(type='email')
+                .form-group.col-md-4
+                  label.label(for='phone') Phone
+                  .form-field-icon-wrap
+                    span.fa.fa-phone
+                    input#phone.form-control(type='text')
+                .form-group.col-md-12
+                  label.label(for='message') Message
+                  span.fa.fa-comments
+                  textarea#message.form-control(name='message', cols='30', rows='10')
+              .row.justify-content-center
+                .col-md-4
+                  input.btn.btn-primary.btn-outline-primary.btn-block(type='submit', value='Send Message')
+    // .section

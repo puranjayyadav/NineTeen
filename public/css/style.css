@@ -10,6 +10,11 @@ body {
   font-weight: 300;
   color: gray;
 }
+.what{
+  font-family: "Playfair Display", serif;
+  color: #000;
+
+}
 .heading{
   font-family: 'Bungee Shade', cursive;
   color: #000;
@@ -1173,7 +1178,7 @@ textarea.form-control {
 }
 
 .section {
-  padding: 7em 0;
+  padding: 0 0;
   z-index: 2;
   position: relative;
 }

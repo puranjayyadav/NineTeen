@@ -14,6 +14,7 @@ const statusRouter = require('./Routers/statusRouter');
 const menuRouter = require('./Routers/menuRouter');
 const userRouter = require('./Routers/userRoutes')
 const globalErrorHandler = require('./Controller/errorController');
+const viewRouter = require('./Routers/viewRouter');
 const app= express();
 
 
@@ -62,7 +63,7 @@ app.get('/contacts', (req,res)=>{
 app.get('/status',(req,res)=>{
     res.status(200).render('status')
 })
-
+app.use('/' , viewRouter);
 app.use('/api/v1/users' , userRouter)
 app.use('/api/v1/contacts' , contactsRouter);
 app.use('/api/v1/status'   , statusRouter );
