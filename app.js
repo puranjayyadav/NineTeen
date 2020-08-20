@@ -1,4 +1,5 @@
 const fs= require('fs');
+const path = require('path');
 const express= require('express');
 const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
@@ -14,6 +15,12 @@ const menuRouter = require('./Routers/menuRouter');
 const userRouter = require('./Routers/userRoutes')
 const globalErrorHandler = require('./Controller/errorController');
 const app= express();
+
+
+app.set('view engine' , 'pug');
+app.set('views' , path.join(__dirname, 'views'));
+
+app.use(express.static(path.join(__dirname,'public')));
 
 app.use(helmet());
 console.log(process.env.NODE_ENV);
@@ -35,12 +42,25 @@ app.use(mongoSanititze());
 app.use(xss());
 
 app.use(hpp());
-app.use(express.static(`${__dirname}/public`));
 
 
 app.use((req,res,next) =>{
     req.requestTime = new Date().toISOString();
     next();
+})
+
+app.get('/' , (req,res)=>{
+    res.status(200).render('base', {
+        title: 'Welcome'
+    });
+});
+
+app.get('/contacts', (req,res)=>{
+    res.status(200).render('contacts')
+})
+
+app.get('/status',(req,res)=>{
+    res.status(200).render('status')
 })
 
 app.use('/api/v1/users' , userRouter)
