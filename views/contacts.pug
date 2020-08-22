@@ -1,1 +1,124 @@
-extends base
+doctype html
+head
+  title NineteeN (contacts)
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  link(href='https://fonts.googleapis.com/css?family=Playfair+Display:300,400,700,800|Open+Sans:300,400,700' rel='stylesheet')
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+  link(rel='stylesheet' href='css/bootstrap.css')
+  link(rel='stylesheet' href='css/animate.css')
+  link(rel='stylesheet' href='css/owl.carousel.min.css')
+  link(rel='stylesheet' href='css/magnific-popup.css')
+  link(rel='stylesheet' href='css/aos.css')
+  link(rel='stylesheet' href='css/bootstrap-datepicker.css')
+  link(rel='stylesheet' href='css/jquery.timepicker.css')
+  link(rel='stylesheet' href='fonts/ionicons/css/ionicons.min.css')
+  link(rel='stylesheet' href='fonts/fontawesome/css/font-awesome.min.css')
+  link(rel='stylesheet' href='fonts/flaticon/font/flaticon.css')
+  // Theme Style
+  link(rel='stylesheet' href='assets/css/main.css')
+  link(rel='stylesheet' href='css/style.css')
+
+  include _site-button
+
+  // site-header
+  include _header       
+    // .cover_1
+    #wrapper
+      // Banner
+      section#intro.main
+        span.icon.fa-phone.major
+        h2 Contacts
+        p There's nothing more frustrating than asking someone at middle of the night for a contact. Uhh . Even we hated that , so insted we did all the hard work for you . Here you will find all the contacts that you'll ever need to survive at MUJ
+      // Items
+      section#contacts.main.items
+        article.item
+          header
+            a(href='eateries.html')
+              img(src='images/eateries.jpg' style='height: 100%; width: 100%; object-fit:cover' alt='')
+            h3(style='font-size:25px') Eateries
+          p
+            | You need not call up your friends
+            br
+            |   &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;at 1AM to find out the number of Dialog 
+            br
+            |   &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;to order your favorite pizza.
+          p
+          ul.actions
+            li
+              a.button(href='/eateries') Check it out
+        article.item
+          header
+            a(href='#')
+              img(src='images/Stationary.jpg' style='height: 100%; width: 100%; object-fit:cover' alt='')
+            h3(style='font-size:25px') Necessities
+          p
+            | All the necessory numbers 
+            br
+            |   &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; in a single place 
+            br
+            |   &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; for your convienence.
+          ul.actions
+            li
+              a.button(href='#') More
+        article.item
+          header
+            a(href='#')
+              img(src='images/Admin.jpg' style='height: 100%; width: 100%; object-fit:cover' alt='')
+            h3(style='font-size:25px') Administration
+          p
+            | Call up the college 
+            br
+            |                   and ask them why the fee 
+            br
+            |                   is so ridiculously high.
+            br
+            |                   Get all the contacts here.
+          ul.actions
+            li
+              a.button(href='#') More
+        article.item
+          header
+            a(href='#')
+              img(src='images/swimming.jpg' style='height: 100%; width: 100%; object-fit:cover' alt='')
+            h3 Fun
+          p
+            | What do you consider
+            br
+            |   &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; as fun? Well we got it 
+            br
+            |   &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; all covered here.
+            br
+            br
+          ul.actions
+            li
+              a.button(href='#') More
+      
+      // Footer
+      footer#footer
+        ul.icons
+          li
+            a.icon.fa-twitter(href='#')
+              span.label Twitter
+          li
+            a.icon.fa-facebook(href='#')
+              span.label Facebook
+          li
+            a.icon.fa-instagram(href='#')
+              span.label Instagram
+          li
+            a.icon.fa-linkedin(href='#')
+              span.label LinkedIn
+          li
+            a.icon.fa-envelope(href='#')
+              span.label Email
+        p.copyright
+          | &copy; Design By  
+          a(href='https://www.linkedin.com/in/Puranjay-Yadav\
+          ') Puranjay
+          |  / 
+          a(href='https://www.linkedin.com/in/pritam-reddy-76855693/') Pritam
+          | .
+    // loader
+    include loader 
+    

@@ -1,15 +1,12 @@
 const fs = require('fs');
 const mongoose = require('mongoose');
-const deotenv = require('dotenv');
+const dotenv = require('dotenv');
 const Menu = require('../models/menuModel');
 const Contact = require('../models/contactModels');
 const { userInfo } = require('os');
-deotenv.config({path: './config.env'});
+dotenv.config({path: './config.env'});
 //SERVER MANAGEMENT SYSTEM
-const DB = process.env.DATABASE.replace(
-    '<password>',
-    process.env.DATABASE_PASSWORD
-)
+
 mongoose.connect(DB,{
     useNewUrlParser: true,
     useCreateIndex:true,

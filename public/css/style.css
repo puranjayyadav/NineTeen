@@ -400,13 +400,19 @@ textarea.form-control {
 }
 
 .ftco-46 .ftco-46-row > div {
+  
   text-align: center;
   width: 100%;
 }
 
 @media (min-width: 992px) {
   .ftco-46 .ftco-46-row > div {
-    width: 33.33333%;
+    
+    padding-left: 50px;
+    margin-left: 40px;
+    align-items: center;
+    width: 70%;
+    margin-bottom: 40px;
   }
 }
 
@@ -451,7 +457,7 @@ textarea.form-control {
 
 .ftco-46 .ftco-46-text {
   padding: 40px;
-  background: #fff;
+  background:#F7F7F7;
 }
 
 @media (max-width: 991.98px) {
@@ -1301,11 +1307,17 @@ textarea.form-control {
   }
 }
 
+@media screen and (min-width: 360px){
+  .cover_1 .heading{
+    font-size:40px;
+  }
+}
+
 .cover_1 .heading {
 
   color: white;
   font-weight: 100;
-  font-size: 50px;
+  font-size: 45px;
   line-height: 1.5;
 }
 

@@ -30,6 +30,7 @@ exports.getAllMenu =catchAsync(async (req,res ,next) =>{
         const menu = await features.query;
         res.status(200).json({
             status:'Success',
+            results:menu.length,
             data:{
                 menu
             }

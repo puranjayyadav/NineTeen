@@ -2,90 +2,143 @@
   {
   "id": 0 ,
   "name": "Chaap Hut", 
-  "contact": 9166116511 
+  "contact": 9166116511 ,
+  "category": "Indian Cuisine And Delhi Specials",
+  "imageCover":"india1.jpg"
   },
   
   {
   "id": 1 ,
   "name": "Chatkara" ,
-  "contact": 7375041725 
+  "contact": 7375041725,
+  "category": "Indian Cuisine ",
+  "imageCover":"india2.jpg"
+
+
+  
   },
   
   {
   "id": 2 ,
   "name": "Chilling Point" ,
-  "contact": 9521099336 
+  "contact": 9521099336 ,
+  "category": "Quick Snacks and Drinks",
+  "imageCover":"drinks1.jpg"
+
   },
   
   {
   "id": 3 ,
   "name": "The Crazy Chef" ,
-  "contact":  9660343726 
+  "contact":  9660343726,
+  "category": "Fast Food",
+  "imageCover":"fast1.jpg"
+
   },
   
   {
   "id": 4 ,
   "name": "Cruncheez" ,
-  "contact":  9001641663 
+  "contact":  9001641663 ,
+  "category": "Fast Food",
+  "imageCover":"fast2.jpg"
   },
   
   {
   "id": 5 ,
   "name": "Delight Shakes" ,
-  "contact": 9660344966 
+  "contact": 9660344966 ,
+  "category": "American Drinks",
+  "imageCover":"shakes.jpg"
+
+
   },
   
   {
   "id": 6 ,
   "name": "Dev Sweets" ,
-  "contact":  7665616797 
+  "contact":  7665616797 ,
+  "category": "Indian Cuisine",
+  "imageCover":"indian.jpg"
+
+
   },
   
   {
   "id": 7 ,
   "name": "Dialog" ,
-  "contact":  9983087222 
+  "contact":  9983087222 ,
+  "category": "Italian Pizzas And Snacks",
+  "imageCover":"pizza.jpg"
+
+
   },
   
   {
   "id": 8 ,
   "name": "Indie Vibes", 
-  "contact": 9116666188 
+  "contact": 9116666188 ,
+  "category": "Indian Cuisine",
+  "imageCover":"indie.jpg"
+
   },
   
   {
   "id": 9 ,
   "name": "Kebab Nation" ,
-  "contact":  7357549601 
+  "contact":  7357549601,   
+  "category": "Indian Cuisine",
+  "imageCover":"kebab.jpg"
+
+
   },
   
   {
   "id": 10 ,
   "name": "Let's Go Live" ,
-  "contact":  7357549602 
+  "contact":  7357549602,
+  "category": "Italian Fast Food",
+  "imageCover":"pastas.jpg"
+
+ 
   },
   
   {
   "id": 11 ,
   "name": "Login" ,
-  "contact":  9799295329 
+  "contact":  9799295329,
+  "category": "Authentic Indian",
+  "imageCover":"indian4.jpg"
+
+ 
   },
   {
   "id": 12 ,
   "name": "Saras Drinks" ,
-  "contact":  7340000547 
+  "contact":  7340000547 ,
+  "category": "Indian Drinks And Shakes",
+  "imageCover":"tea.jpg"
+
+
   },
   
   {
   "id": 13 ,
   "name": "Saras Food" ,
-  "contact":  9166116515 
+  "contact":  9166116515,
+  "category": "Indian Snacks And Fast Food",
+  "imageCover":"saras.jpg"
+
+ 
   },
   
   {
   "id": 14 ,
   "name": "Tandoor" ,
-  "contact":  7300116308 
+  "contact":  7300116308 ,
+  "category": "Indian",
+  "imageCover":"tandoor.jpg"
+
   }
   
   ]

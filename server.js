@@ -5,8 +5,11 @@ deotenv.config({path: './config.env'});
 //SERVER MANAGEMENT SYSTEM
 
   
-const url = `mongodb+srv://vodKA:9xW7z3Tdd7qhGwgo@cluster0.ykhst.mongodb.net/MUJ?retryWrites=true&w=majority`;
-mongoose.connect(url,{
+const DB = process.env.DATABASE.replace(
+    '<password>',
+    process.env.MONGO_PASSWORD
+)
+mongoose.connect(DB,{
     useNewUrlParser: true,
     useCreateIndex:true,
     useFindAndModify:false,

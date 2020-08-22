@@ -11,4 +11,5 @@ router.get('/status', viewsController.getStatus);
 
 router.get('/menu' , viewsController.getMenu);
 
+router.get('/eateries' ,viewsController.getEateries)
 module.exports = router;

@@ -1,0 +1,17 @@
+.row
+              .ftco-46
+                .ftco-46-row.d-flex.flex-column.flex-lg-row
+                  .ftco-46-image(style=`background-image: url(images/${eaterie.imageCover}); style=height: 100%; width: 100%; object-fit:cover`)
+                  .ftco-46-text.ftco-46-arrow-left
+                    h4.ftco-46-subheading= eaterie.category
+                    h3.ftco-46-heading= eaterie.name 
+                    small.text-secondary(style='font-size:75%') 9 AM - 10 PM
+                    p.mb-5
+                      | Tips are not expected in Chinese restaurants. The service fee is included in the food prices.
+                      br
+                      br
+                    a.btn-link(href=`tel:+91${eaterie.contact}`)  Call
+                    p
+                      a.btn-link(href='#')
+                        | Menu 
+                        span.ion-android-arrow-forward
