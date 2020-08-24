@@ -1,121 +1,214 @@
-[
-        {
-    "Dish_name": "Pizza Pocket",
-    "price": 150,
-    "ratingsAverage": 5
-    },
+[   
+      
     {
-    
-    "Dish_name": "French Fries Large",
-    "price": 10,
-    "ratingsAverage": 2.5
+        "Dish_name": "CHIMI CHANGA ROLL",
+       "price": 80,
+       "description":"Lobster and tender shrimp, with onions, sweet peppers, spinach and our three cheese blend. Griddled and served with tomato salsa and sour cream.",
+       "imageCover": "Admin.jpg",
+       "isCategory":"Vegetarian",
+       "restrauntName":"Chaap Hut"
 
+    },{
+        "Dish_name": "VEG DIMSUM(MOMOS)",
+        "price": 70,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
         },
-        {
- 
-    "Dish_name": "Potato Wedges",
-    "price": 15,
-    "ratingsAverage": 1.5
-
-            },
-        {
+        {"Dish_name": "CHEESE MUSHROOM DIMSUM",
+         "price": 90,
+         "description":"Chinese style steamed vegetable & mushroom filled dumplings.",
+         "imageCover": "Admin.jpg"
+     },
+     {
+         "Dish_name": "VEG SPRING ROLL",
+        "price": 70,
+        "description":"A heaping mountain of rings, handmade with Panko breading and shredded coconut flakes",
+        "imageCover": "Admin.jpg"
+     },
+     {
+         "Dish_name": "CHILLI STICK VEG",
+        "price": 80,
+        "description":"Lobster and tender shrimp, with onions, sweet peppers, spinach and our three cheese blend. Griddled and served with tomato salsa and sour cream.",
+        "imageCover": "Admin.jpg"
+     },
+     {
+         "Dish_name": "VEG SALT AND PEPPER",
+        "price": 70,
+        "description":"Lobster and tender shrimp, with onions, sweet peppers, spinach and our three cheese blend. Griddled and served with tomato salsa and sour cream.",
+        "imageCover": "Admin.jpg"
+     },
+     {
+         "Dish_name": "CRISPY CHILLY POTATO",
+        "price": 80,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
+     },
+     {
+         "Dish_name": "HONEY CHILLI POTATO",
+        "price": 80,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
+     },
+     {
+         "Dish_name": "BABYCORN MUSHROOM SALT AND PEPPER",
+        "price": 80,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
+     },
+     {
+         "Dish_name": "CHILLY PANEER DRY",
+        "price": 115,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
+     },
+     {
+         "Dish_name": "VEG. MANCHURIAN DRY",
+        "price": 80,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
+     },
+     {
+         "Dish_name": "FRENCH FRY",
+        "price": 70,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
+     },{
+         "Dish_name": "POTATO WEDGES",
+        "price": 70,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
+     },{
+         "Dish_name": "CRISPY CORN SALT PEPPER",
+        "price": 90,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
+     },{
+         "Dish_name": "GOBHI MANCHURIAN DRY",
+        "price": 80,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
+     },{
+         "Dish_name": "VEG. SWEET CORN SOUP",
+        "price": 60,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
+     },{
+         "Dish_name": "VEG. MANCHOW SOUP",
+        "price": 70,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
+     },{
+         "Dish_name": "VEG. HOT AND SOUR SOUP",
+        "price": 60,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
+     },{
+         "Dish_name": "VEG CANTON CORN SOUP",
+        "price": 60,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
+     },{
+         "Dish_name": "VEG. TALUMEAN SOUP",
+        "price": 70,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
+     },{
+         "Dish_name": "VEG. MANCHURIAN GRAVY",
+        "price": 70,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
+     },{
+         "Dish_name": "CHILLY PANEER GRAVY",
+        "price": 70,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
+     },{
+         "Dish_name": "SUMMER VEGETABLE SALENTRO SAUCE",
+        "price": 70,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
+     },{
+         "Dish_name": "AUTHENTIC VEGETABLE CHILLY SAUCE",
+        "price": 70,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
+     },{
+         "Dish_name": "GOBHI MANCHURIAN GRAVY",
+        "price": 70,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
+     },{
+         "Dish_name": "SUMMER VEGETABLE SZ SAUCE",
+        "price": 70,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
+     },{
+         "Dish_name": "VEG FRIED RICE",
+        "price": 70,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
+     },{
+         "Dish_name": "VEG HAKKA NOODLES",
+         
+        "price": 70,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
+     },{
+         "Dish_name": "VEG SZ FRIED RICE",
+        "price": 70,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
+     },{
+         "Dish_name": "VEG CHOWMEIN",
+        "price": 70,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
+     },{
+         "Dish_name": "VEG CHILLY GARLIC NOODLES",
+        "price": 70,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
+     },{
+         "Dish_name": "VEG CHOPSEY                ",
+        "price": 70,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
+     },{
+         "Dish_name": "VEG SHANGHAI FRIED RICE",
+        "price": 70,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
+     },{
+         "Dish_name": "VEG TOMATO CHILLY CORIANDER RICE",
+        "price": 70,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
+     },{
+         "Dish_name": "VEG GINGER CAPSICUM FRIED RICE",
+        "price": 70,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
+     },{
+         "Dish_name": "VEG TOMATO MUSHROOM FRIED RICE",
+        "price": 70,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
+     },{
+         "Dish_name": "VEG TRIPLE SZ FRIED RICE",
+        "price": 70,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
+     },{
+         "Dish_name": "VEG BOMBO FRIED RICE",
+        "price": 70,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
+     },{
+         "Dish_name": "STEAM RICE",
+        "price": 70,
+        "description":"Chinese style steamed vegetable filled dumplings.",
+        "imageCover": "Admin.jpg"
+     }
     
-    "Dish_name": "Veg Spring Roll",
-    "price": 15,
-    "ratingsAverage": 3.5
-
-            }
-            ,
-            {
-        
-        "Dish_name": "Honey Chilli Potato",
-        "price": 15,
-        "ratingsAverage": 2.5
-    
-                }
-
-                ,
-                {
-            
-            "Dish_name": "Dragon Potato",
-            "price": 15,
-            "ratingsAverage": 4.5
-        
-                    }
-                    ,
-                    {
-                
-                "Dish_name": "Veg Manchurian Dry & Gravy",
-                "price": 15,
-                "ratingsAverage": 5
-            
-                        }
-                        ,
-                        {
-                    
-                    "Dish_name": "Crispy Veg",
-                    "price": 15,
-                    "ratingsAverage": 4.5
-                
-                            }
-                            ,
-                            {
-                        
-                        "Dish_name": "Chilly Paneer Dry & Gravy",
-                        "price": 15,
-                        "ratingsAverage": 4.5
-                    
-                                }
-                                ,
-                                {
-                            
-                            "Dish_name": "Paneer Manchurian",
-                            "price": 15,
-                            "ratingsAverage": 4.5
-                        
-                                    }
-                                    ,
-                                    {
-                                
-                                "Dish_name": "Paneer 65",
-                                "price": 15,
-                                "ratingsAverage": 4.5
-                            
-                                        },
-                                        {
-                                    
-                                    "Dish_name": "Hunan Paneer",
-                                    "price": 15,
-                                    "ratingsAverage": 4.5
-                                
-                                            },
-                                            {
-                                        
-                                        "Dish_name": "Honey Chilly Paneer",
-                                        "price": 15,
-                                        "ratingsAverage": 4.5
-                                    
-                                                },
-                                                {
-                                            
-                                            "Dish_name": "Veg Gold Coin",
-                                            "price": 15,
-                                            "ratingsAverage": 4.5
-                                        
-                                                    },
-                                                    {
-                                                
-                                                "Dish_name": "Chicken Nuggets",
-                                                "price": 15,
-                                                "ratingsAverage": 4.5
-                                            
-                                                        },
-                                                        {
-                                                    
-                                                    "Dish_name": "Chicken Spring Roll",
-                                                    "price": 15,
-                                                    "ratingsAverage": 4.5
-                                                
-                                                            }
- 
+   
 ]

@@ -17,6 +17,7 @@ dotenv.config({
   path: './config.env'
 }); //SERVER MANAGEMENT SYSTEM
 
+var DB = process.env.DATABASE.replace('<password>', process.env.MONGO_PASSWORD);
 mongoose.connect(DB, {
   useNewUrlParser: true,
   useCreateIndex: true,

@@ -4,9 +4,8 @@ const menuSchema = new mongoose.Schema({
     Dish_name:{
         type: String,
         required: [true , 'A Menu must have a Dish'],
-        unique: true,
         minlength: 2,
-        maxlength: 30,
+        maxlength: 40,
         
     },
     slug: String,
@@ -20,6 +19,20 @@ const menuSchema = new mongoose.Schema({
         required:[true, 'A Dish Must Have a Price'],
         minlength: 1,
         maxlength:4
+    },
+    description:{
+        type:String,
+        required: [true, 'A dish must have a description']
+    },
+    imageCover:{
+        type:String,
+        required:[true , 'A dish must have a image']
+    },
+    isCategory: {
+        type:String
+    },
+    restrauntName:{
+        type:String
     }
 })
 //Document Middleware: Runs before.save and .create() .insertMany()

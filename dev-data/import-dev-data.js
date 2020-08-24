@@ -7,6 +7,11 @@ const { userInfo } = require('os');
 dotenv.config({path: './config.env'});
 //SERVER MANAGEMENT SYSTEM
 
+const DB = process.env.DATABASE.replace(
+    '<password>',
+    process.env.MONGO_PASSWORD
+)
+
 mongoose.connect(DB,{
     useNewUrlParser: true,
     useCreateIndex:true,

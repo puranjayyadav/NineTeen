@@ -1,0 +1,67 @@
+doctype html
+head
+  title NineteeN | #{title}
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+  link(href='https://fonts.googleapis.com/css?family=Playfair+Display:300,400,700,800|Open+Sans:300,400,700' rel='stylesheet')
+  link(rel='stylesheet' href='css/bootstrap.css')
+  link(rel='stylesheet' href='css/animate.css')
+  link(rel='stylesheet' href='css/owl.carousel.min.css')
+  link(rel='stylesheet' href='css/magnific-popup.css')
+  link(rel='stylesheet' href='css/aos.css')
+  link(rel='stylesheet' href='css/bootstrap-datepicker.css')
+  link(rel='stylesheet' href='css/jquery.timepicker.css')
+  link(rel='stylesheet' href='fonts/ionicons/css/ionicons.min.css')
+  link(rel='stylesheet' href='fonts/fontawesome/css/font-awesome.min.css')
+  link(rel='stylesheet' href='fonts/flaticon/font/flaticon.css')
+  // Theme Style
+  link(rel='stylesheet' href='assets/css/main.css')
+  link(rel='stylesheet' href='css/style.css')
+  include _site-button
+
+  include _header
+    // .cover_1
+    #wrapper  
+      // Banner
+
+      #section-menu.section.bg-light(data-aos='fade-up')
+        .container
+          .row.section-heading.justify-content-center.mb-5
+            .col-md-8.text-center
+              h2.mb-3(class="Menu") Menu
+          .row.justify-content-center
+            .col-md-8
+              ul#pills-tab.nav.site-tab-nav(role='tablist')
+                li.nav-item
+                  a#pills-breakfast-tab.nav-link.active(data-toggle='pill' href='#pills-breakfast' role='tab' aria-controls='pills-breakfast' aria-selected='true') Veg
+                li.nav-item
+                  a#pills-lunch-tab.nav-link(data-toggle='pill' href='#pills-lunch' role='tab' aria-controls='pills-lunch' aria-selected='false') Non-Veg
+                li.nav-item
+                  a#pills-dinner-tab.nav-link(data-toggle='pill' href='#pills-dinner' role='tab' aria-controls='pills-dinner' aria-selected='false') Extras
+              #pills-tabContent.tab-content
+                #pills-breakfast.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='pills-breakfast-tab')
+                  .text
+
+                    h3(style='text-align:center;') Momos
+                  hr
+                each Menus in menu
+                  .d-block.d-md-flex.menu-food-item
+                    .text.order-1.mb-3 
+                      img(src='images/img_1.jpg' alt='Image')
+                      h3= Menus.Dish_name
+                      p= Menus.description
+                    .price.order-2
+                      strong &#x20B9; 70
+                  // .menu-food-item
+
+      // .section
+      
+      // Footer
+      include _footer
+      
+    // loader
+    include loader
+    
+
+      
